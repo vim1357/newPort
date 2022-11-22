@@ -1,0 +1,188 @@
+@import "reset";
+@import "colors";
+@import "fonts";
+@import "button";
+@import "breakpoints";
+
+
+html {
+  font-size: 1.17vw;
+  font-family: "Inter", sans-serif;
+}
+
+.main-page-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  height: 100vh;
+
+  @media (width < $tablet) {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr;
+    height: unset;
+  }
+}
+
+.text-part {
+  grid-column: 1;
+  padding: 1.8rem 3.56rem 7.025rem 0;
+
+  @media (width < $tablet) {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  &__link {
+    color: $black;
+
+    &:link {
+      text-decoration: none;
+    }
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+
+  &__header {
+    font-size: 3.8rem;
+    color: $blue-main;
+    margin-left: 1.75rem;
+    letter-spacing: -0.08rem;
+
+    @media (width < $tablet) {
+      font-size: 7.3rem;
+      line-height: 7rem;
+      font-weight: 400;
+      letter-spacing: -0.08rem;
+    }
+
+    &__name {
+      color: $black;
+    }
+
+    &__position {
+      margin-top: -0.625rem;
+
+      &__second-line {
+        margin-top: -0.5rem;
+      }
+    }
+  }
+
+  &__main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 3.425rem 0 0 2rem;
+
+
+
+    &__element {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: -0.02rem;
+
+      @media (width < $tablet) {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+
+    }
+
+    &__footer-text {
+      display: flex;
+      align-items: stretch;
+      gap: 0.625rem;
+
+      &>span {
+        display: inline-flex;
+        gap: 0.625rem;
+        align-items: baseline;
+      }
+
+      &>a {
+        text-decoration: underline;
+        color: $black;
+      }
+    }
+  }
+}
+
+.image-part {
+  grid-column: 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue-main;
+
+  @media (width < $tablet) {
+    grid-row: 1;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 52fr auto;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(@assets/noise.gif);
+    opacity: .06;
+    content: "";
+    z-index: 0;
+  }
+
+  &__portrait {
+    background-image: url(@assets/ph.png);
+    width: 19.2rem;
+    height: 25.4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @media (width < $tablet) {
+      width: 44rem;
+      height: 58.5rem;
+    }
+
+
+
+    &__sign {
+      position: absolute;
+      background-image: url(@assets/sign.png);
+      width: 16rem;
+      height: 6rem;
+      bottom: -7.85rem;
+      right: -5.45rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (width < $tablet) {
+        width: 35rem;
+        height: 15rem;
+        top: 12rem;
+        left: 40rem;
+        transform: rotate(21.75deg);
+      }
+    }
+  }
+
+
+}

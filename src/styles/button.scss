@@ -1,0 +1,29 @@
+@mixin button ($background-color, $text-color, $hover-color, $active-color) {
+    border-radius: 30px;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    background-color: $background-color;
+    color: $text-color;
+
+    &:hover {
+        transition: 0.3s;
+        background-color: $hover-color;
+    }
+
+    &:active {
+        transition: 0.3s;
+        background-color: $active-color;
+    }
+}
+
+.button-blue {
+    @include button($blue-main, $white, $blue-neutral, $blue-dark)
+  }
+  
+  .button-pink {
+    @include button($pink, $black, $pink-neutral, $pink-dark)
+  }
+  
+  .button-black {
+    @include button($black, $white, $grey-neutral, $grey-light)
+  }
