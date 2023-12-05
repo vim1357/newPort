@@ -38,23 +38,12 @@ html {
     color: $black;
     text-decoration: underline;
 
-    &:link {
-      text-decoration: underline;
-     
-    }
-
-    &:visited {
-      text-decoration: underline;
-    }
-
     &:hover {
-      text-decoration: underline;
       transition: 0.3s;
       color: $grey-neutral;
     }
 
     &:active {
-      text-decoration: underline;
       transition: 0.3s;
       color: $grey-light;
     }
