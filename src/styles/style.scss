@@ -23,7 +23,7 @@ html {
   }
 }
 
-.text-part {
+.text {
   grid-column: 1;
   padding: 1.8rem 3.56rem 7.025rem 0;
 
@@ -37,6 +37,7 @@ html {
   &__link {
     color: $black;
     text-decoration: underline;
+    text-underline-offset: 0.15rem;
 
     &:hover {
       transition: 0.3s;
@@ -81,43 +82,25 @@ html {
     flex-direction: column;
     gap: 1.5rem;
     margin: 3.425rem 0 0 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.02rem;
 
     @media (width < $tablet) {
       gap: 3rem;
+      font-size: 3rem;
+      line-height: 4rem;
     }
 
-    &__element {
-      font-size: 1rem;
-      line-height: 1.5rem;
-      letter-spacing: -0.02rem;
-
-      @media (width < $tablet) {
-        font-size: 3rem;
-        line-height: 4rem;
-      }
-
-    }
-
-    &__footer-text {
+    &__footer {
       display: flex;
       align-items: stretch;
       gap: 0.625rem;
-
-      &>span {
-        display: inline-flex;
-        gap: 0.625rem;
-        align-items: baseline;
-      }
-
-      &>a {
-        text-decoration: underline;
-        color: $black;
-      }
     }
   }
 }
 
-.image-part {
+.image {
   grid-column: 2;
   position: relative;
   width: 100%;
