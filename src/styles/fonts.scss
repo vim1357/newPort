@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'Inter';
   font-style: normal;
+  font-weight: 100;
+  src: url('@assets/fonts/Inter/static/Inter-Thin.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
   font-weight: 200;
   src: url('@assets/fonts/Inter/static/Inter-ExtraLight.ttf') format('truetype')
 }
@@ -34,6 +41,12 @@
   font-style: normal;
   font-weight: 800;
   src: url('@assets/fonts/Inter/static/Inter-ExtraBold.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: url('@assets/fonts/Inter/static/Inter-Bold.ttf') format('truetype')
 }
 
 
